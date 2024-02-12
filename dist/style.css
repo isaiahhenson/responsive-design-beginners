@@ -4,14 +4,15 @@ html {
 }
 
 *,
-*::before *::after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -24,8 +25,23 @@ h3 {
   margin-top: 0;
 }
 
+h1 {
+  font-size: 2.625rem;
+  font-size: clamp(2.5rem, 1.77rem + 3.64vw, 4.5rem);
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 1.91rem + 1.45vw, 3rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
 p {
   margin-top: 0;
+  font-size: 1rem;
 }
 
 a,
@@ -55,31 +71,7 @@ a:active {
   background-color: hsl(120, 100%, 27%);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  gap: 40px;
-  width: min(100% - 40px, 1000px);
+.wrapper {
+  width: min(100% - 3rem, 75rem);
   margin-inline: auto;
-}
-@media (min-width: 56.25em) {
-  .grid {
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-  }
-}
-.grid__main, .grid__sidebar {
-  padding: 40px;
-}
-.grid__main {
-  background-color: hsl(240, 100%, 33%);
-}
-.grid__sidebar {
-  background-color: hsl(300, 100%, 31%);
-}
-@media (max-width: 56.24875em) {
-  .grid__sidebar {
-    text-align: center;
-  }
 }/*# sourceMappingURL=style.css.map */
