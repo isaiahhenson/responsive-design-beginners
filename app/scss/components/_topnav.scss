@@ -15,9 +15,6 @@
   }
 
   &__homelink {
-    &:hover {
-      opacity: 0.8;
-    }
   }
 
   &__logo {
@@ -37,10 +34,6 @@
     @include u.breakpoint(large) {
       gap: 40px;
     }
-  }
-
-  &__item {
-    list-style-type: none;
   }
 
   &__link {
